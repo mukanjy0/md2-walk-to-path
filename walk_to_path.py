@@ -1,6 +1,5 @@
 def walk_to_path(walk : str):
   '''
-  str -> str
   Receives a walk in compressed format (tuple of vertices). 
     Example: (A,B,C,B) for G(V,E) : V = {A, B, C}, E = {{A, B}, {B, C}, {A, C}}
 
