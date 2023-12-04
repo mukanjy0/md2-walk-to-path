@@ -1,4 +1,12 @@
-def walk_to_path(walk):
+def walk_to_path(walk : str):
+  '''
+  str -> str
+  Receives a walk in compressed format (tuple of vertices). 
+    Example: (A,B,C,B) for G(V,E) : V = {A, B, C}, E = {{A, B}, {B, C}, {A, C}}
+
+  Returns a path in compressed format, derived from the walk received as an argument.
+    Example: (A,B,C,B) -> (A,B)
+  '''
   walk = walk.replace("(", "")
   walk = walk.replace(")", "")
   nodes = walk.split(",")
