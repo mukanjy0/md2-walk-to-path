@@ -112,3 +112,23 @@ def walk_to_path(V, E, walk: str):
     return result
 
 
+def test_0():
+    V = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    E = [['A', 'E'], ['E', 'D'], ['E', 'F'], ['F', 'G'], ['E', 'H'], ['E', 'G'], ['A', 'G'], ['G', 'H'], ['B', 'C']]
+    w = "(A,E,D,E,F,G,H,E,G,A)"
+    print(walk_to_path(V, E, w))
+
+
+def test_1():
+    V = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    E = [['A', 'E'], ['E', 'D'], ['E', 'F'], ['F', 'G'], ['E', 'H'], ['E', 'G'], ['A', 'G'], ['G', 'H'], ['B', 'C']]
+    w = "(A,E,D,E,F,G,H,E,G,E)"
+    print(walk_to_path(V, E, w))
+
+
+def test_2():
+    V = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    E = [['A', 'E'], ['E', 'D'], ['E', 'F'], ['F', 'G'], ['E', 'H'], ['E', 'G'], ['A', 'G'], ['G', 'H'], ['B', 'C'], ['C', 'D'], ['A', 'B'], ['C', 'G']]
+    w = "(A,E,D,E,F,G,H,E,G,A,B,C,D,C,B,A,G,E,D,G,F)"
+    print(walk_to_path(V, E, w))
+
